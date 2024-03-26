@@ -55,4 +55,5 @@ def play_game():
     else:
         print_pause("Thanks for playing!")
 
-play_game()
+if __name__ == "__main__":
+    play_game()
