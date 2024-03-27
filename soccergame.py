@@ -12,8 +12,10 @@ def print_pause(*messages):
 
 # Function to simulate taking a penalty
 def take_penalty():
-    print_pause("You step up to take the decisive penalty kick.")  # Print statement
-    outcomes = ["score", "miss", "hit_post", "saved"]  # List of possible outcomes
+    # Print statement
+    print_pause("You step up to take the decisive penalty kick.")
+    # List of possible outcomes
+    outcomes = ["score", "miss", "hit_post", "saved"]
     outcome = random.choice(outcomes)  # Randomly selecting an outcome
     # Handling different outcomes
     if outcome == "score":
@@ -62,9 +64,11 @@ def pass_penalty():
 # Function to play the penalty shootout game
 def play_game():
     print_pause("It's the final of the Soccer World Cup, "
-                "and your country has never won before. ",
-                "You have been picked to play the last penalty ",
-                "You have a chance to make history today if you score this decisive penalty.")
+                "and your country has never won before.",
+                "You have been picked to play the last penalty",
+                "You have a chance to make history today "
+                "if you score this decisive penalty.")
+
     while True:
         choice = input("What do you want to do? "
                        "Enter 1 to take the penalty, "
@@ -76,20 +80,23 @@ def play_game():
             pass_penalty()  # Calling pass_penalty function
             break
         else:
-            print("Invalid input. Please enter 1 or 2.")  # Error message for invalid input
+            # Error message for invalid input
+            print("Invalid input. Please enter 1 or 2.")
 
     while True:
         play_again = input("GAME OVER!\n"
                            "Would you like to play again? (y/n): ")
         if play_again.lower() == 'y':
             print_pause("Starting a new game...")  # Print statement
-            play_game()  # Recursive call to play_game function to start a new game
+            # Recursive call to play_game function to start a new game
+            play_game()
             break
         elif play_again.lower() == 'n':
             print_pause("Thanks for playing!")  # Print statement
             break
         else:
-            print("Invalid input. Please enter 'y' or 'n.'")  # Error message for invalid input
+            # Error message for invalid input
+            print("Invalid input. Please enter 'y' or 'n.'")
 
 
 if __name__ == "__main__":
